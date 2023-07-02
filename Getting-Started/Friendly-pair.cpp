@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int getDivisorsSum(int num){
+    
+    int sum = 0;
+    
+    for(int i = 1; i < num; i++){
+        if(num % i == 0)
+            sum = sum + i;
+    }
+    return sum;
+}
+
+int main ()
+{
+    int num1, num2;
+    cin >> num1 >> num2;
+    
+    int sum1 = getDivisorsSum(num1);
+    int sum2 = getDivisorsSum(num2);
+    
+    if(sum1/num1 == sum2/num2)
+        cout << " friendly pairs";
+    else
+        cout << " not friendly pairs";
+
+    
+}
